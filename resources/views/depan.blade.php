@@ -72,7 +72,7 @@
     <section class="page-section portfolio" id="partner">
         <div class="container">
             <!-- Partner Section Heading-->
-            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Item</h2>
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Partners</h2>
             <!-- Icon Divider-->
             <div class="divider-custom">
                 <div class="divider-custom-line"></div>
@@ -127,6 +127,26 @@
             </div>
         </div>
     </section>
+    <section class="page-section text-black mb-0" id="about">
+        <div class="container-second">
+            <!-- About Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-secondary">SUBMIT</h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom divider-black">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- About Section Content-->
+            <div class="text-secondary" style="text-align: center">
+                <h5>You can send the document through our contact.</h5> <br>
+                <div>
+                    <a class="btn btn-outline-dark btn-social mx-1 text-secondary" href="https://wa.me/62081934675896?text=Hello%20there!%20I%20have%20a%20question."><i
+                        class="fab fa-fw fa-whatsapp"></i></a> 
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Footer-->
     <footer class="footer text-center" id="profile">
         <div class="container">
@@ -154,7 +174,7 @@
                 <div class="col-lg-4">
                     <h4 class="text-uppercase mb-4">About Site</h4>
                     <p class="lead mb-0">
-                        {{ $site_description }}
+                        {!! $site_description !!}
                     </p>
                 </div>
             </div>
@@ -191,7 +211,7 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Partner Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="{{ Storage::url('$item->thumbnail') }}"alt="..." />
+                                    <img class="img-fluid rounded mb-5" src="{{ Storage::url($item->thumbnail) }}"alt="..." />
                                     <!-- Partner Modal - Text-->
                                     {!! $item->content !!}
                                     <div class="m-5">
